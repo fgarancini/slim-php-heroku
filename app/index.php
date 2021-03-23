@@ -8,7 +8,7 @@ function CalcularPotencia($num)
 }
 
 for ($i=1; $i < 4; $i++) { 
-    $result = CalcularPotencia(3);
+    $result = CalcularPotencia($i);
     echo "$result<br/>";
 }
 ?>
