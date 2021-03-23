@@ -2,7 +2,7 @@
 
 $result = 0;
 
-public function CalcularPotencia($num)
+function CalcularPotencia($num)
 {
     return pow($num,2);
 }
