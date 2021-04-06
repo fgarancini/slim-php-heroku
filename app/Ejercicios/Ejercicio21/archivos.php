@@ -5,24 +5,27 @@ class Archivos
     static function AltaUsuario(Usuario $usuario)
     {
         $datos ="";
-        $miArchivo = fopen("usuarios.csv","a");
+        $miArchivo = fopen("usuarios.csv","a+");
         $datos.="$usuario->_nombre,";
         $datos.="$usuario->_clave,";
         $datos.="$usuario->_email";
-        fwrite($miArchivo,"$datos\n");
+        fwrite($miArchivo,$datos."\n");
         fclose($miArchivo);
     }
 
     static function LeerCsv($dir)
     {
-        $miArchivo = fopen($dir,"r");
+        $users = []; 
+        if ($dir !== null) {
+            $miArchivo = fopen($dir,"r");
+            while (!feof($miArchivo) && ($datos = fgetcsv($miArchivo)) !== false) {          
+                $usuario = new Usuario($datos[0],$datos[1],$datos[2]);
+                array_push($users,$usuario);
+            }
+            fclose($miArchivo);
+        }
 
-        // while (!feof($miArchivo)) {
-        $misDatos = fgetcsv($miArchivo,1000,",");
-        // }
-        fclose($miArchivo);
-
-        return $misDatos;
+        return $users;
     }
 }
 ?>

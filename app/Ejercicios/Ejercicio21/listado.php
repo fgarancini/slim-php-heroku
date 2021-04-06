@@ -25,7 +25,8 @@ switch ($listadoAMostrar) {
     case 'usuarios':
         echo "usuarios\n";
         $data = Archivos::LeerCsv("usuarios.csv");
-        var_dump($data);
+        $temp = Usuario::DibujarListado($data);
+        echo $temp;
         break;
     default:
         echo "Listado inexistente";
