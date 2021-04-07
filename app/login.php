@@ -1,6 +1,6 @@
 <?php
-include_once "usuario.php";
-include_once "archivos.php";
+include_once "./Ejercicios/Ejercicio21/archivos.php";
+include_once "./Ejercicios/Ejercicio21/usuario.php";
 
 $nombre = $_GET["nombre"];
 $clave = $_GET["clave"];
