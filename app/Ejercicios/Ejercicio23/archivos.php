@@ -30,15 +30,18 @@ class Archivos
 
     static function GuardarJson($data,$tipo)
     {
-        $json = "";
+        $json = [];
+        $string = file_get_contents("usuarios.json");
+        $json = json_decode($string, true);
 
         if ($data != null) {
-            $json = fopen('usuarios.json','w');
-            fwrite($json,json_encode($data,JSON_PRETTY_PRINT));
-            fclose($json);
+            $json_file = fopen('usuarios.json','w');
+            array_push($json,json_encode($data,JSON_PRETTY_PRINT));
+            fwrite($json_file,"[$json]");
+            fclose($json_file);
         }
 
-        return $json;
+        return $json_file;
     }
 
 }

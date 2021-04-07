@@ -10,7 +10,7 @@ class Usuario
  * El constructor siempre lleva dos giones bajo, se puede fuertetipar y definir valores por 
  * defecto que eequivaldria a crear sobrecarga, hace que los parametros sean opcionales
  */
-    public function __construct(string $nombre,string $clave,string $email,int $id,DateTime $fecha)
+    public function __construct(string $nombre,string $clave,string $email,int $id,string $fecha)
     {
         $this->_nombre = $nombre;
         $this->_clave = $clave;
