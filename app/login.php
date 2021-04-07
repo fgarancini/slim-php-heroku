@@ -6,6 +6,7 @@ include_once "./Ejercicios/Ejercicio21/usuario.php";
 // $clave = $_GET["clave"];
 // $mail = $_GET["mail"];
 // $user = new Usuario($nombre,$clave,$mail);
+echo "echo";
 
 $user = new Usuario("admin","1234","gmail@gmail.com");
 
