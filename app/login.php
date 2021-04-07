@@ -1,7 +1,7 @@
 <?php
 include_once "./Ejercicios/Ejercicio21/archivos.php";
 include_once "./Ejercicios/Ejercicio21/usuario.php";
-
+echo "ejercicio 22";
 $nombre = $_GET["nombre"];
 $clave = $_GET["clave"];
 $mail = $_GET["mail"];
