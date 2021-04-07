@@ -15,8 +15,8 @@
 // </ul>
 // Hacer los métodos necesarios en la clase usuario
 */
-include_once "./Ejercicios/Ejercicio21/archivos.php";
-include_once "./Ejercicios/Ejercicio21/usuario.php";
+include_once "./archivos.php";
+include_once "./usuario.php";
 
 
 $listadoAMostrar = $_GET["listado"];
