@@ -6,11 +6,13 @@ $nombre = $_GET["nombre"];
 $clave = $_GET["clave"];
 $mail = $_GET["mail"];
 $user = new Usuario($nombre,$clave,$mail);
+
 /*
-para la verificacion ->
-clave : 1234
-mail : gmail@gmail.com
+    para la verificacion ->
+    clave : 1234
+    mail : gmail@gmail.com
 */
+
 // $user = new Usuario("admin","1234","gmail@gmail.com");
 
 $data = Archivos::LeerCsv("./Ejercicios/Ejercicio21/usuarios.csv");

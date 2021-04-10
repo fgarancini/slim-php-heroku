@@ -1,0 +1,30 @@
+[
+    {
+        "_nombre": "franco",
+        "_clave": "111",
+        "_email": "g@g.com",
+        "_ID": 8147,
+        "_fecha": "2021-04-10"
+    },
+    {
+        "_nombre": "franco",
+        "_clave": "111",
+        "_email": "g@g.com",
+        "_ID": 8490,
+        "_fecha": "2021-04-10"
+    },
+    {
+        "_nombre": "franco",
+        "_clave": "111",
+        "_email": "g@g.com",
+        "_ID": 4278,
+        "_fecha": "2021-04-10"
+    },
+    {
+        "_nombre": "franco",
+        "_clave": "111",
+        "_email": "g@g.com",
+        "_ID": 4404,
+        "_fecha": "2021-04-10"
+    }
+]
