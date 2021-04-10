@@ -1,7 +1,7 @@
 <?php
 include_once "Ejercicios/Ejercicio23/usuario.php";
 include_once "Ejercicios/Ejercicio23/archivos.php";
-echo "Ejercicio 23 pegale a postman!";
+echo "Ejercicio 23 pegale a postman!\n";
 $nombre = $_POST["nombre"];
 $clave = $_POST["clave"];
 $mail = $_POST["mail"];
@@ -16,11 +16,3 @@ $ok = Archivos::GuardarJson($user,"usuarios.json");
 
 echo $ok;
 ?>
-<!-- 
-{
-    "_nombre": "franco",
-    "_clave": "111",
-    "_email": "g@g.com",
-    "_ID": 7236,
-    "_fecha": "2021-04-10"
-} -->
