@@ -4,7 +4,7 @@ include_once "Ejercicios/Ejercicio23/archivos.php";
 
 echo "Ejercicio 23 pegale a postman!\n";
 
-$destino = "Ejercicios/Ejercicio23/Usuarios/Fotos/".$_FILES["archivo"]["name"];
+$destino = "Usuarios/Fotos/".$_FILES["archivo"]["name"];
 // move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino);
 if (!move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino)) {
     echo "Imposible mover el archivo.";
