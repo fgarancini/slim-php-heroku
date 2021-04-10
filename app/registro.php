@@ -9,10 +9,14 @@ $destino = "Usuarios/Fotos/".$_FILES["archivo"]["name"];
 $esImagen = getimagesize($_FILES["archivo"]["tmp_name"]);
 
 echo $esImagen[0];
-if (!move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino)) {
-    echo "Imposible mover el archivo.";
-}
 
+if (move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino)) {
+    echo "Guardada!!\n";
+}
+else
+{
+    echo "No se pudo subir";
+}
 $nombre = $_POST["nombre"];
 $clave = $_POST["clave"];
 $mail = $_POST["mail"];
