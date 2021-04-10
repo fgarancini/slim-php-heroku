@@ -5,7 +5,7 @@ include_once "Ejercicios/Ejercicio23/archivos.php";
 echo "Ejercicio 23 pegale a postman!\n";
 
 $destino = "Ejercicios/Ejercicio23/Usuarios/Fotos".$_FILES["archivo"]["name"];
-move_uploaded_file($_FILES["archivo"]["Fotos"],$destino);
+move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino);
 
 $nombre = $_POST["nombre"];
 $clave = $_POST["clave"];
