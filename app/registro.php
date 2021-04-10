@@ -1,7 +1,7 @@
 <?php
 include_once "Ejercicios/Ejercicio23/usuario.php";
 include_once "Ejercicios/Ejercicio23/archivos.php";
-
+echo "Ejercicio 23 pegale a postman!";
 $nombre = $_POST["nombre"];
 $clave = $_POST["clave"];
 $mail = $_POST["mail"];
