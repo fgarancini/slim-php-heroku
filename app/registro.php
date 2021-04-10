@@ -8,7 +8,7 @@ $destino = "Usuarios/Fotos/".$_FILES["archivo"]["name"];
 // move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino);
 $esImagen = getimagesize($_FILES["archivo"]["tmp_name"]);
 
-echo $esImagen;
+echo $esImagen[0];
 if (!move_uploaded_file($_FILES["archivo"]["tmp_name"],$destino)) {
     echo "Imposible mover el archivo.";
 }
