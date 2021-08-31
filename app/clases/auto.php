@@ -13,22 +13,41 @@ class Auto
         $this->_fecha =  $fecha;
     }
 
-    public function AgregarImpuesto(float $iva)
+    public function AgregarImpuestos($iva)
     {
         $this->_precio += $iva;
     }
 
     static function MostrarAuto(Auto $auto)
     {
-        return "{$auto->_marca} / {$auto->_color}";
+        $informe = "";
+        $informe.="Marca: {$auto->_marca}<br>";
+        $informe.="Color: {$auto->_color}<br>";
+        $informe.="Precio: {$auto->_precio}<br>";
+        if ($auto->_fecha != null) {
+            $informe.="Fecha: {$auto->_fecha->format("Y-m-d")}";
+        }
+        return "$informe <br>";
     }
 
-    static function Add(Auto $a1,Auto $a2)
+    public static function Add(Auto $a1,Auto $a2)
     {
         if ($a1->_marca == $a2->_marca && $a1->_color == $a2->_color) {
             return $a1->_precio + $a2->_precio;
         }
         return 0;
+    }
+
+    public function Equals(Auto $auto1,Auto $auto2)
+    {
+        if($auto1->_marca == $auto2->_marca)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 ?>
