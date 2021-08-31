@@ -1,24 +1,16 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 1);
+    include './clases/cuadrado.php';
+    include './clases/auto.php';
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Factory\AppFactory;
-use Slim\Routing\RouteCollectorProxy;
+    $a =  new Auto("suzuki","Amarillo",30,new DateTime('now'));
+    $a1 =  new Auto("suzuki","Amarillo",30,new DateTime('now'));
+    $b =  new Auto("suzuki","Azul",55.00,new DateTime('now'));
 
-require __DIR__ . '/../vendor/autoload.php';
+    $cuadrado = new Cuadrado(8,8);
 
-// Instantiate App
-$app = AppFactory::create();
+    echo($cuadrado->__toString());
 
-// Add error middleware
-$app->addErrorMiddleware(true, true, true);
+    echo($a->MostrarAuto($a));
 
-$app->get('[/]', function (Request $request, Response $response) {    
-    $response->getBody()->write("GET => Bienvenido!!! a SlimFramework");
-    return $response;
-
-});
-
-$app->run();
+    echo(Auto::Add($a,$a1));
+?>
